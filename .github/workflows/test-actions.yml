@@ -2,7 +2,6 @@ name: CI
 run-name: Provision of smth in (${{ inputs.stage }})
 
 on:
-  push:
   workflow_dispatch:
       stage:
         description: Stage to run in

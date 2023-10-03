@@ -3,14 +3,14 @@ run-name: Provision of smth in (${{ inputs.stage }})
 
 on:
   workflow_dispatch:
-      stage:
-        description: Stage to run in
-        required: true
-        type: choice
-        options:
-          - '"dev"'
-          - '"staging"'
-          - '"prod"'
+    stage:
+      description: Stage to run in
+      required: true
+      type: choice
+      options:
+        - '"dev"'
+        - '"staging"'
+        - '"prod"'
 
 jobs:
   build:

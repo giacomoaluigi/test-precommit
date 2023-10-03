@@ -1,0 +1,25 @@
+name: CI
+run-name: Provision of smth in (${{ inputs.stage }})
+
+on:
+  push:
+  workflow_dispatch:
+      stage:
+        description: Stage to run in
+        required: true
+        type: choice
+        options:
+          - '"dev"'
+          - '"staging"'
+          - '"prod"'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Git current branch
+        run: |
+          echo "${{ inputs.stage }}"
+          git branch

@@ -8,9 +8,9 @@ on:
       required: true
       type: choice
       options:
-        - '"dev"'
-        - '"staging"'
-        - '"prod"'
+        - dev
+        - staging
+        - prod
 
 jobs:
   build:
